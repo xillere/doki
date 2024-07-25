@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+* {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.primary-button {
+  color: #fff;
+  /*text-transform: uppercase;*/
+  font-size: 15px;
+  background-color: blueviolet;/*linear-gradient(180deg, #,#);*/
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: none;
+}
+
+.primary-button:hover {
+  background-color: rgb(65, 15, 112);
+}
+
+.sec-button {
+  background-color: linear-gradient(180deg,#3fbbfe,#a541ff);
+  color: white;
+  /*background-color: linear-gradient(to,#3fbbfe,#a541ff);*/
+  font-weight: 500px;
+  font-size: 15px;
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: solid 2px rgb(121, 119, 119);
+  margin: 6px;
+}
+
+.sec-button:hover {
+  color: rgb(48, 48, 48);
+  border: solid 2px rgb(48, 48, 48);
+}
+
+/*------navbar-------*/
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav .nav-button {
+  color: white;
+  background-color: black;
+  /*border: none;*/
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  margin: 10px;
+  height: 50px;
+  
+}
+
+nav .nav-button:disabled {
+  background-color: rgb(128,128,128); /*makes it gray*/ 
+}
+
+nav .logo-container {
+  width: 150px;
+  margin-top: -30px; /*originally margin: 15px*/
+}
+
+nav .logo-container .logo {
+  width: 100%;
+
+}
+
+/*----homepage----*/
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: linear-gradient(to top right,#3fbbfe,#a541ff);
+}
+
+/*----auth modal----*/
+.auth-modal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 40px;
+  width: 300px;
+  margin-left: auto ;
+  margin-right: auto ;
+  max-width: 360px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.auth-modal .close-icon {
+  float: right; 
+}
+
+.auth-modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-modal input[type=password],
+.auth-modal input[type=email] {
+  padding: 8px;
+  margin: 8px;
+  font-size: 17px;
+}
+.auth-modal input[type="submit"] {
+ background: linear-gradient(to top right,#3fbbfe,#a541ff);
+}
+
+/*........onboarding page.........*/
+.onboarding form {
+  display: flex;
+  justify-content: center;
+}
+
+.onboarding form section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 35%;
+  text-align: center;
+}
+
+.onboarding form input {
+  padding: 15px 30px;
+  margin: 10px 0px;
+  font-size: 15px;
+  border: solid 2px rgb(219,219,219);
+  border-radius: 10px;
+}
+
+
+.onboarding form input::-webkit-outer-spin-button,
+.onboarding form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.onboarding form .mult-input {
+  display: flex;
+  flex-direction: row; 
+}
+
+.onboarding form .mult-input input {
+  margin-right: 10px;
+}
+
+.onboarding form label {
+  margin: 10px 0px;
+}
+
+.onboarding form .mult-input label {
+  padding: 10px;
+  border: solid 2px rgb(212, 202, 202);
+  border-radius: 10px;
+  transition: all 0.3s;
+  margin-right: 10px;
+}
+
+.onboarding form input[type="radio"] {
+  display: none;
+}
+
+.onboarding form input[type="number"] {
+  width: 10%;
+}
+
+.onboarding form input[type="radio"]:checked + label {
+  border: solid 2px #d7e0e2;
+  background: linear-gradient(to top right,#3fbbfe,#a541ff);
+}
+
+.onboarding form input[type="submit"] {
+  background: linear-gradient(to top right,#3fbbfe,#a541ff);
+}
+
+.onboarding form input[type="submit"]:hover {
+  background: linear-gradient(to top right,#0f74aa,#460c79);
+}
+
+.onboarding form input[type="submit"]:active {
+  background: linear-gradient(to top right,#3fbbfe,#a541ff);
+}
+
+.onboarding form .photo-container img{
+  width: 100%;
+}
+
+/*-------- Dashboard  --------*/
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard .swipe-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.swipe {
+  position: absolute;
+}
+
+.dashboard .card-container {
+  width: 400px;
+  height: 650px;
+}
+
+.card {
+  width: 400px;
+  height: 650px;
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.dashboard .swipe-info {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+}
+
+/*-------- Chat Container --------*/
+.chat-container {
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+  rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  width: 30%;
+  text-align: left;
+  z-index: 1;
+}
+
+.chat-container .chat-container-header {
+  background: linear-gradient(to top right,#3fbbfe,#a541ff);
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-container .option {
+  border: none;
+  background-color: rgb(255, 255, 255);
+  border-bottom: solid 1px rgb(12, 2, 2);
+  font-size: 17px;
+  margin: 2px;
+  padding: 10px;
+}
+
+/*.chat-container .option::after {
+  content: '';
+  display: block;
+  position: relative;
+  width: 30%;
+  border: 1px solid #0c0404;
+  margin-top: 8px;
+}*/
+
+.chat-container .option:disabled {
+  border-bottom: solid 4px rgb(243, 243, 243);
+}
+
+.chat-container .profile,
+.chat-container .log-out-icon {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: rgb(14, 1, 1);
+}
+
+.img-container {
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.img-container img {
+  width: 100%;
+}
+
+/*-------- Chat Display --------*/
+.chat-display,
+.matches-display {
+  padding: 20px;
+  height: 60vh;
+  overflow-y: auto;
+}
+
+/*-------- Chat Input --------*/
+.chat-input {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
